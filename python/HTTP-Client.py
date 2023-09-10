@@ -7,7 +7,7 @@ def send_http_request(filepath, ip, port=80):
     try:
         # Opem file and base64 encode
         with open(filepath, "rb") as f:
-            f = file.read()
+            file_content = f.read()
             base64_data = base64.b64encode(file_content).decode("utf-8")
 
         # Set custom headers
